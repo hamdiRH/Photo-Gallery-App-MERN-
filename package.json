@@ -19,7 +19,7 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "start": "npm build && node server/index.js",
+    "start": "npm build && cd server && npm install && node server/index.js",
     "start-client": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
