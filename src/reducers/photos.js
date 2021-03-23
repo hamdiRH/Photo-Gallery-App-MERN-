@@ -1,7 +1,9 @@
-const photosReducer = (state = [], action) => {
+const photosReducer = (state = {photos:[],loading:false}, action) => {
     switch (action.type) {
+      case 'LOADING':
+      return {...state,loading:true}
       case 'LOAD_PHOTOS':
-        return action.photos;
+        return {photos:action.photos,loading:false};
       default:
         return state;
     }
